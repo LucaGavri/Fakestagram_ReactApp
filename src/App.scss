@@ -1,6 +1,25 @@
-$maincolor: #005445;
-
-
 body{
-  background: $maincolor;
+  background: dodgerblue;
+}
+div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title{
+    font-size: 35px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .sth{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 90vw;
+    height: 90vh;
+    background: white;
+    border-radius: 20px;
+  }
 }
