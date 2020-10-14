@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.scss';
+import Data from './data';
 
 function App() {
     return (
-        <div>
-            <span className="title">faKebook</span>
-            <div className="sth">ok lets do sth!!</div>
+        <div className="app">
+            <span className="title">Fakestagram</span>
+            <div className="sth">
+                <Data />
+            </div>
         </div>
     );
 }
