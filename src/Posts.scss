@@ -1,0 +1,26 @@
+.post{
+
+  width: 500px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:20px 0;
+  padding: 10px;
+  border: 1px solid #b7b5b5;
+  border-radius: 20px;
+
+
+  img{
+    width: 93%;
+  }
+
+  p{
+    width: 93%;
+    margin: 0;
+  }
+  .postName{
+    font-weight: 600;
+  }
+}
