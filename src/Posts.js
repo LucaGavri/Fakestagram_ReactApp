@@ -7,7 +7,7 @@ const Posts = ({postText, likes, postImg, postName}) => {
         <div className='post'>
             <p className='postName'>{postName}</p>
             <img src={postImg} alt={postText}/>
-            <p><i className="far fa-heart"></i> {likes}</p>
+            <p><i className="far fa-heart"></i>{likes}</p>
             <p>{postText}</p>
         </div>
     )
