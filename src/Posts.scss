@@ -20,7 +20,24 @@
     width: 93%;
     margin: 0;
   }
+
   .postName{
     font-weight: 600;
+  }
+
+  .postText{
+  }
+
+  .likesAndDate{
+    width: 93%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .likes{
+    }
+
+    .postDate{
+    }
   }
 }

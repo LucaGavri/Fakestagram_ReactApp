@@ -35,7 +35,7 @@ function App() {
                 {/*))*/}
                 {/*}*/}
                 {posts.map(post => (
-                    <Posts key={post.id} postText={post.text} likes={post.likes} postImg={post.image} postName={post.owner.firstName + ' ' + post.owner.lastName}/>
+                    <Posts key={post.id} postText={post.text} likes={post.likes} postImg={post.image} postName={post.owner.firstName + ' ' + post.owner.lastName} postDate={post.publishDate}/>
                 ))
                 }
             </div>
