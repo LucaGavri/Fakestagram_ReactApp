@@ -11,8 +11,11 @@ function App() {
             <div className="app__header">
                 <img className="fakeLogo" alt="FakeLogo" src={FakeLogo}/>
             </div>
-            <div className="sth">
+            <div className="app__posts">
                 <Posts/>
+                <Posts/>
+                <Posts/>
+
             </div>
         </div>
     );

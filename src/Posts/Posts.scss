@@ -1,7 +1,37 @@
-.post{
-  width: 100%;
+.post {
+  width: 95%;
+  max-width: 600px;
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 7px #aaa;
+  font-size: 14px;
 
-  .post__img{
+  .post__header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    .post__avatar{
+      height: 30px;
+      width: 30px;
+    }
+
+    .post__username {
+      padding: 10px;
+      font-weight: bold;
+    }
+  }
+
+  .post__txt {
+    padding: 5px;
+
+    .post__txt__username {
+      padding-right: 5px;
+    }
+  }
+
+  .post__img {
     width: 100%;
     object-fit: contain;
   }
