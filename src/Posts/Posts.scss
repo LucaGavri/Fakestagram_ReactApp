@@ -1,6 +1,5 @@
 .post {
-  width: 95%;
-  max-width: 600px;
+  width: 400px;
   margin: 10px 0;
   background: white;
   border-radius: 5px;
@@ -23,16 +22,17 @@
     }
   }
 
+  .post__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
   .post__txt {
-    padding: 5px;
+    padding: 10px;
+
 
     .post__txt__username {
       padding-right: 5px;
     }
-  }
-
-  .post__img {
-    width: 100%;
-    object-fit: contain;
   }
 }
