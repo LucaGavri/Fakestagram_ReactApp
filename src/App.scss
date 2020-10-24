@@ -1,8 +1,22 @@
-*{
+* {
   margin: 0;
 }
 
-.app{
+.app__modalForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .app__fakeLogo {
+    width: 120px;
+    padding: 5px;
+    margin-left: 20px;
+    object-fit: contain;
+  }
+}
+
+.app {
   font-family: 'Quicksand', sans-serif;
   background: #f2f2f2;
   display: flex;
@@ -18,24 +32,64 @@
     background: #ffffff;
     box-shadow: 0 2px 5px #888;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: 1;
 
-    .fakeLogo {
+    .app__header__fakeLogo {
       width: 140px;
       padding: 5px;
       margin-left: 20px;
       object-fit: contain;
     }
+
+    .app__header__btns {
+      margin-right: 10px;
+      width: 130px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .app__header__logInBtn {
+        margin: 0 5px;
+        height: 80%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: white;
+        cursor: pointer;
+        transition: 0.3s ;
+
+        &:hover{
+          box-shadow: 0 0 3px #555;
+        }
+      }
+
+      .app__header__signInBtn {
+        margin: 0 5px;
+        height: 80%;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: white;
+        cursor: pointer;
+        transition: 0.3s ;
+
+        &:hover{
+          box-shadow: 0 0 3px #555;
+        }
+      }
+    }
   }
 
-  .app__posts{
+  .app__posts {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-height: calc(100vh - 80px) ;
+    min-height: calc(100vh - 80px);
     border-radius: 5px;
     margin-top: 40px;
   }
