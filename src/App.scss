@@ -48,13 +48,13 @@
 
     .app__header__btns {
       margin-right: 10px;
-      width: 130px;
+      width: 140px;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      .app__header__logInBtn {
+      .app__header__btns__logoutBtn {
         margin: 0 5px;
         height: 80%;
         border: 1px solid #ddd;
@@ -68,17 +68,34 @@
         }
       }
 
-      .app__header__signInBtn {
-        margin: 0 5px;
-        height: 80%;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background: white;
-        cursor: pointer;
-        transition: 0.3s ;
+      .app__header__btns__btns2{
 
-        &:hover{
-          box-shadow: 0 0 3px #555;
+        .app__header__btns__btns2__signUpBtn {
+          margin: 0 5px;
+          height: 80%;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          background: white;
+          cursor: pointer;
+          transition: 0.3s ;
+
+          &:hover{
+            box-shadow: 0 0 3px #555;
+          }
+        }
+
+        .app__header__btns__btns2__logInBtn {
+          margin: 0 5px;
+          height: 80%;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          background: white;
+          cursor: pointer;
+          transition: 0.3s ;
+
+          &:hover{
+            box-shadow: 0 0 3px #555;
+          }
         }
       }
     }
