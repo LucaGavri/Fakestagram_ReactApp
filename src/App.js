@@ -1,12 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
-import FakeLogo from "./images/Fakestagram-logo.jpg";
+import FakeLogo from "./Images/Fakestagram-logo.jpg";
 import Posts from "./Posts/Posts";
 import {db, auth} from "./firebase";
 import {makeStyles} from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {Button} from "@material-ui/core";
 import {Input} from '@material-ui/core'
+import PostUpload from "./PostUpload/PostUpload";
 
 
 function getModalStyle() {
@@ -35,7 +36,7 @@ function App() {
 
     const [posts, setPosts] = useState([]);
     const [open, setOpen] = useState(false);
-    const [openLogIn, setOpenLogIn] = useState('');
+    const [openLogIn, setOpenLogIn] = useState(false);
     const classes = useStyles();
     const [modalStyle] = useState(getModalStyle);
     const [username, setUsername] = useState('');
@@ -67,7 +68,7 @@ function App() {
     }, [user, username]);
 
     useEffect(() => {
-        db.collection('posts').onSnapshot(snapshot => {
+        db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot => {
             setPosts(snapshot.docs.map(doc => ({
                 id: doc.id,
                 post: doc.data()
@@ -150,7 +151,7 @@ function App() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <Button type="submit" onClick={signUp}>Log In</Button>
+                        <Button type="submit" onClick={logIn}>Log In</Button>
                     </form>
                 </div>
 
@@ -181,6 +182,15 @@ function App() {
                     )
                 }
             </div>
+            {user?.displayName ? (
+                <div className="app__postUpload">
+                    <PostUpload username={user.displayName}/>
+                </div>
+            ): (
+                <p>You have to log in</p>
+            )}
+
+
         </div>
     );
 }
