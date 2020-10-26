@@ -1,5 +1,5 @@
 .post {
-  width: 400px;
+  max-width: 400px;
   margin: 10px 0;
   background: white;
   border-radius: 5px;
@@ -33,6 +33,40 @@
 
     .post__txt__username {
       padding-right: 5px;
+    }
+  }
+
+  .post__commentForm{
+    width: 100%;
+    display: flex;
+
+    .post__commentForm__input{
+      height: 20px;
+      border: 1px solid #ddd;
+      flex: 1;
+    }
+
+    .post__commentForm__btn{
+      height: 24px;
+      border: 1px solid #ddd;
+      flex: 0;
+      cursor: pointer;
+      transition: 0.3s ;
+
+      &:hover{
+        box-shadow: 0 0 3px #555;
+      }
+
+
+    }
+  }
+
+  .post__comments{
+    padding: 5px 10px;
+    width: 95%;
+
+    .post__comments__comment{
+      width: 100%;
     }
   }
 }

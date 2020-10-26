@@ -54,6 +54,7 @@ function PostUpload({username}) {
 
     return (
         <div className="postUpload">
+            <p>Add the post!</p>
             <progress className="postUpload__progress" value={progress} max="100"/>
             <input className="postUpload__caption" type="text" placeholder="Caption for the post..." onChange={e => setCaption(e.target.value)}
                    value={caption}/>

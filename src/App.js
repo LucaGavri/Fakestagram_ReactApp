@@ -174,14 +174,7 @@ function App() {
                 </div>
 
             </div>
-            <div className="app__posts">
-                {
-                    posts.map(({post, id}) => (
-                            <Posts key={id} username={post.username} caption={post.caption} postImg={post.postImg}/>
-                        )
-                    )
-                }
-            </div>
+
             {user?.displayName ? (
                 <div className="app__postUpload">
                     <PostUpload username={user.displayName}/>
@@ -189,6 +182,16 @@ function App() {
             ): (
                 <p>You have to log in</p>
             )}
+
+            <div className="app__posts">
+                {
+                    posts.map(({post, id}) => (
+                            <Posts key={id} postId={id} user={user} username={post.username} caption={post.caption} postImg={post.postImg}/>
+                        )
+                    )
+                }
+            </div>
+
 
 
         </div>
