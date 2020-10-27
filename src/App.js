@@ -24,7 +24,7 @@ function getModalStyle() {
 const useStyles = makeStyles((theme) => ({
     paper: {
         position: 'absolute',
-        width: 400,
+        width: 300,
         backgroundColor: theme.palette.background.paper,
         border: '2px solid #000',
         boxShadow: theme.shadows[5],
@@ -82,7 +82,7 @@ function App() {
             .createUserWithEmailAndPassword(email, password)
             .then((authUser) => {
                 return authUser.user.updateProfile({
-                    displayName: username
+                    displayName: username,
                 })
             })
             .catch((error) => alert(error.message));
@@ -108,8 +108,9 @@ function App() {
                 <div style={modalStyle} className={classes.paper}>
                     <form className="app__modalForm">
                         <img className="app__fakeLogo" alt="FakeLogo" src={FakeLogo}/>
+
                         <Input
-                            placeholder="uername"
+                            placeholder="username"
                             type="text"
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}
