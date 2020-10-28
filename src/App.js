@@ -186,15 +186,15 @@ function App() {
 
             <div className="app__posts">
                 {
-                    posts.map(({post, id}) => (
+                    posts.map(({post, id, user}) => (
                             <Posts key={id} postId={id} user={user} username={post.username} caption={post.caption} postImg={post.postImg}/>
                         )
                     )
                 }
             </div>
-
-
-
+            <div className="app__footer">
+                <p className="app__footer__txt">Made by <a href="https://lucagavri.github.io/Portfolio_Website/" target="_blank">LucaGavri</a></p>
+            </div>
         </div>
     );
 }

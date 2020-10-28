@@ -18,6 +18,10 @@
     height: 30px;
     border: none;
     box-shadow: 0 0 2px #aaa;
+
+    &:focus{
+      outline: none;
+    }
   }
 
   .postUpload__addFile{

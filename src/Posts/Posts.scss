@@ -62,9 +62,42 @@
     }
   }
 
+  .post__likes{
+    height: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .post__likes__emptyHeart{
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .post__likes__fullHeart{
+      font-size: 20px;
+      color: #ee0606;
+      cursor: pointer;
+    }
+
+    .post__likes__numLikes{
+      margin-left: 5px;
+      border: none;
+      outline: none;
+
+      &:focus{
+        border: none;
+        outline: none;
+      }
+
+
+    }
+  }
+
   .post__comments{
     padding: 5px 10px;
     width: 95%;
+    font-size: 12px;
 
     .post__comments__comment{
       width: 100%;

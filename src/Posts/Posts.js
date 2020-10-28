@@ -9,6 +9,7 @@ function Posts({username, caption, postImg, postId, user}) {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState('');
 
+
     useEffect(() => {
         let unsubscribe;
         if (postId) {
@@ -47,7 +48,12 @@ function Posts({username, caption, postImg, postId, user}) {
                 />
                 <p className="post__username">{username}</p>
             </div>
-            <img className="post__img" src={postImg} alt="nebula"/>
+            <img className="post__img" src={postImg} alt=""/>
+            {/*<div className="post__likes">*/}
+            {/*    <i className="far fa-heart post__likes__emptyHeart"></i>*/}
+            {/*    <i className="fas fa-heart post__likes__fullHeart"></i>*/}
+            {/*    <input className="post__likes__numLikes" type="number" value="555"/>*/}
+            {/*</div>*/}
             <p className="post__txt"><strong className="post__txt__username">{username}</strong>{caption}
             </p>
             <div className="post__comments">
@@ -56,7 +62,6 @@ function Posts({username, caption, postImg, postId, user}) {
                         <b>{comment.username}</b> {comment.txt}
                     </p>
                 ))}
-
             </div>
 
             {user && (
