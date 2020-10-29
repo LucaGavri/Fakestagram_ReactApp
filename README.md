@@ -1,3 +1,12 @@
+#Fakestagram_ReactApp
+Live: https://fakestagramreactapp.web.app/
+
+Instagram clone using Firebase Servers and MaterialUI components.<br/>
+You have to sign up or log in to see all features.
+
+
+##ReactApp
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
